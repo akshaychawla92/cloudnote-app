@@ -29,15 +29,13 @@ group :development, :test do
   gem 'haml', '~> 4.0', '>= 4.0.7'
   gem 'simple_form', '~> 3.3', '>= 3.3.1'
   gem 'devise', '~> 4.2'
-end
-
-group :development do
   gem 'sqlite3'
 end
 
 group :production do
-  gem 'pg'
   gem 'rails_12factor'
+	gem 'pg'
+
 end
 
 ruby "2.2.2"
