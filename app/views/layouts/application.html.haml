@@ -14,7 +14,7 @@
 				- if user_signed_in?
 					= link_to "Notes", notes_path
 					= link_to "Credit Cards", cards_path
-					= link_to ".Upload", scans_path, class: "fa fa-cloud-upload whiteclass"
+					= link_to ".Uploads", scans_path, class: "fa fa-cloud-upload whiteclass"
 					
 					= link_to ".Sign Out", destroy_user_session_path, method: :delete, class:"fa fa-sign-out whiteclass"
 				- else
