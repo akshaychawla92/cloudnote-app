@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  card_number: MyString
+  expiry_date: MyString
+  security_code: MyString
+  bank_name: MyString
+
+two:
+  name: MyString
+  card_number: MyString
+  expiry_date: MyString
+  security_code: MyString
+  bank_name: MyString

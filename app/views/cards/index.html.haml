@@ -1,0 +1,14 @@
+.wrapper_with_padding
+	#notes.clearfix
+		- unless @cards.blank?
+			- @cards.each do |card|
+				%a{ href: (url_for [card])}
+					.note
+						%p.title= card.bank_name
+						%p.date= card.card_number
+		- else
+			%h2 Add a Credit Card
+			%p It appears you haven't added any credit or debit card yet... Lets fix that. Why don't you go ahead and add one.
+
+	%p
+	%button= link_to "New Card", new_card_path

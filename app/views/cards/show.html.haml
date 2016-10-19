@@ -1,0 +1,15 @@
+.wrapper_with_padding
+	#note_show
+		%h1.title= @card.bank_name
+		 
+		%p= simple_format(@card.name)
+		%p= simple_format(@card.card_number)
+		%p= simple_format(@card.expiry_date)
+		%p= simple_format(@card.security_code)
+		%p= simple_format(@card.bank_name)
+
+		.buttons
+			= link_to "Edit", edit_card_path(@card), class: "button"
+			= link_to "Delete", card_path(@card), method: :delete, data: { confirm: "Are you sure?" }, class: "button"
+
+			
