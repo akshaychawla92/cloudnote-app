@@ -1,0 +1,12 @@
+.wrapper_with_padding
+	#note_show
+		%h1.title= @scan.title
+		 
+		%p= simple_format(@scan.description)
+		%p= image_tag @scan.image.url(:medium)
+
+		.buttons
+			= link_to "Edit", edit_scan_path(@scan), class: "button"
+			= link_to "Delete", scan_path(@scan), method: :delete, data: { confirm: "Are you sure?" }, class: "button"
+
+			

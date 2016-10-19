@@ -12,6 +12,16 @@ Rails.application.routes.draw do
   patch '/cards/:id', to: 'cards#update'
   delete '/cards/:id/', to: 'cards#destroy', as: 'destroy_card'
 
+	#routes for scans
+  get '/scans', to: 'scans#index', as: 'scans'
+  post '/scans', to: 'scans#create'
+  get '/scans/new', to: 'scans#new', as: 'new_scan'
+  get '/scans/:id', to: 'scans#show', as: 'scan'
+  get '/scans/:id/edit', to: 'scans#edit', as:'edit_scan'
+  patch '/scans/:id', to: 'scans#update'
+  delete '/scans/:id/', to: 'scans#destroy', as: 'destroy_scan'
+
+
   authenticated :user do
 	  root "notes#index", as: "authenticated_root"
 	end

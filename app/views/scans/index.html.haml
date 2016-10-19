@@ -1,0 +1,14 @@
+.wrapper_with_padding
+	#notes.clearfix
+		- unless @scans.blank?
+			- @scans.each do |scan|
+				%a{ href: (url_for [scan])}
+					.note
+						%p.title= scan.title
+						%p.date= scan.description
+		- else
+			%h2 Add a Scanned document as photo
+			%p It appears you haven't added any Scanned document yet... Lets fix that. Why don't you go ahead and add one.
+
+	%p
+	%button= link_to "New Image/ Scanned doc", new_scan_path
