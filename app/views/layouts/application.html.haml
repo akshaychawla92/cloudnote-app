@@ -4,6 +4,7 @@
 	%title Cloud Note | Sync your life
 	= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
 	= javascript_include_tag 'application', 'data-turbolinks-track' => true
+	%link{:rel => "stylesheet", :href => "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"}/
 	= csrf_meta_tags
 %body
 	%header
@@ -13,10 +14,11 @@
 				- if user_signed_in?
 					= link_to "Notes", notes_path
 					= link_to "Credit Cards", cards_path
-					= link_to "Images/ Scanned Docs", scans_path
-					= link_to "Sign Out", destroy_user_session_path, method: :delete
+					= link_to ".Upload", scans_path, class: "fa fa-cloud-upload whiteclass"
+					
+					= link_to ".Sign Out", destroy_user_session_path, method: :delete, class:"fa fa-sign-out whiteclass"
 				- else
-					= link_to "Log In", new_user_session_path
+					= link_to ".Log In", new_user_session_path, class: "fa fa-sign-in"
 	%p.notice= notice
 	%p.alert= alert
 

@@ -114,17 +114,22 @@ header {
 			float: right;
 			a {
 				text-decoration: none;
-				color: $light_white;
+				color: $green;
 				font-size: 1.1rem;
 				line-height: 1.5;
-				margin-left: 1rem;
+				margin-left: 1.2rem;
 				&:hover {
-					color: $green;
+					color: $light_white;
+				}
+
+				.whiteclass{
+					color:$light_white;
 				}
 			}
 		}
 	}
 }
+
 
 footer {
 	background: $dark_gray;
